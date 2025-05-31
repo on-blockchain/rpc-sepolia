@@ -3,6 +3,9 @@
 echo -e "Updating system..."
 sudo apt update -y && sudo apt upgrade -y
 
+echo -e "Installing dependencies..."
+sudo apt install -y git curl net-tools jq
+
 echo -e "Installing docker if not installed"
 if ! command -v docker &>/dev/null; then
     echo -e "Docker not found. Installing Docker..."
