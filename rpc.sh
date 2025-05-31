@@ -35,7 +35,7 @@ then
 fi
 
 echo "Starting ETH Sepolia RPC & Beacon"
-docker-compose up -d
+sudo docker compose up -d
 
 echo -e "Use \ncurl -X POST http://localhost:8545 -H "Content-Type:application/json" -d '{\"jsonrpc\":\"2.0\",\"method\":\"net_peerCount\",\"params\":[],\"id\":1}' \n to check if the RPC has been synched\n\n"
 
